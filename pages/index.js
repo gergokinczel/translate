@@ -55,14 +55,14 @@ export default function Home() {
 
   return (<div>
     <Head>
-      <title>Translate with Deepl API and Google Cloud API</title>
+      <title>Translate</title>
       <link rel="icon" href="/favicon.ico" />
       <link href="styles/tailwind.css" />
     </Head>
 
     <main className="flex flex-col items-center justify-center w-full h-max flex-1 px-20 text-center p-4 text-center  sm:p-8 ">
       <h1 className="text-4xl font-bold">
-        Translate with Deepl API
+        Translate with Deepl API and Google Cloud API
       </h1>
 
       <p className="mt-3 text-2xl">
