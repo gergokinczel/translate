@@ -10,6 +10,7 @@ export default function Home() {
   let [translationGoogle, setTranslationGoogle] = useState('');
   let [sourceLang, setSourceLang] = useState('');
 
+  const domain = "https://translate-henna-sigma.vercel.app/api";
   const formData = {
     text: text,
     targetLang: targetLang,
@@ -19,7 +20,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/translate-deepl', {
+      const response = await fetch(`${domain}/translate-deepl` || 'http://localhost:3000/api/translate-deepl', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -34,7 +35,7 @@ export default function Home() {
       console.log(error);
     }
     try {
-      const response = await fetch('http://localhost:3000/api/translate-google', {
+      const response = await fetch(`${domain}/translate-google` || 'http://localhost:3000/api/translate-google', {
         method: 'POST',
         mode: 'cors',
         headers: {
